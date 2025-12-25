@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\termekek;
+use App\Models\Termekek;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TermekekSeeder extends Seeder
 {
@@ -14,7 +15,7 @@ class TermekekSeeder extends Seeder
     public function run(): void
     {
 
-        $kategoriak = termekek::table('kategorias')
+         $kategoriak = DB::table('kategoriaks') 
             ->pluck('id', 'megnevezes')
             ->toArray();
 
@@ -747,13 +748,13 @@ class TermekekSeeder extends Seeder
 
         ];
 
-        foreach ($termekek as &$t) {
+         foreach ($termekek as &$t) {
             $t['kategoria_id'] = $kategoriak[$t['kategoria_nev']];
             unset($t['kategoria_nev']);
             $t['created_at'] = now();
             $t['updated_at'] = now();
         }
 
-        termekek::table('termekeks')->insert($termekek);
+        Termekek::insert($termekek); 
     }
 }

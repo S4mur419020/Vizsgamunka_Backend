@@ -13,8 +13,17 @@ return new class extends Migration
     {
         Schema::create('termekeks', function (Blueprint $table) {
             $table->id();
+            $table->string('nev');
+            $table->foreignId('marka_id')->constrained('markaks')->onDelete('cascade');
+            $table->string('kategoria_id');
+            $table->text('leiras')->nullable();
+            $table->string('nem');
+            $table->string('anyag');
+            $table->boolean('elerheto')->default(true);
             $table->timestamps();
         });
+
+        Schema::enableForeignKeyConstraints();
     }
 
     /**

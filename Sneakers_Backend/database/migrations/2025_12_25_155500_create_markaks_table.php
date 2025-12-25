@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('markaks', function (Blueprint $table) {
             $table->id();
+            $table->string('nev')->unique();
             $table->timestamps();
         });
     }

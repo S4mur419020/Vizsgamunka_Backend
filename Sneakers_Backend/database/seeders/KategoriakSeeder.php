@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\kategoriak;
+use App\Models\Kategoriak;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,13 +13,13 @@ class KategoriakSeeder extends Seeder
      */
     public function run(): void
     {
-        kategoriak::insert([
-            ['megnevezas'=>'Sport'],
-            ['megnevezas'=>'Utcai viselet'],
-            ['megnevezas'=>'Pémium/Divat'],
-            ['megnevezas'=>'Környezetbarát'],
-            ['megnevezas'=>'Retro'],
-            ['megnevezas'=>'Kosaras'],
+        Kategoriak::insert([
+            ['megnevezes'=>'Sport'],
+            ['megnevezes'=>'Utcai viselet'],
+            ['megnevezes'=>'Divat'],
+            ['megnevezes'=>'Környezetbarát'],
+            ['megnevezes'=>'Retro'],
+            ['megnevezes'=>'Kosaras'],
         ]);
     }
 }

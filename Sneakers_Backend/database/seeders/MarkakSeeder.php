@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\markak;
+use App\Models\Markak;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,7 +13,7 @@ class MarkakSeeder extends Seeder
      */
     public function run(): void
     {
-        markak::insert([
+        Markak::insert([
             ['nev' => 'Nike'],
             ['nev' => 'Adidas'],
             ['nev' => 'New Balance'],

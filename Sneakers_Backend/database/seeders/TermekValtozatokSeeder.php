@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Termek_valtozatok;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,28 @@ class TermekValtozatokSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Termek_valtozatok::insert([
+            [
+                'termek_id' => 1,
+                'nev' => 'Fekete, 42-es méret',
+                'elerheto' => true,
+            ],
+            [
+                'termek_id' => 1,
+                'nev' => 'Fehér, 43-as méret',
+                'elerheto' => true,
+            ],
+            [
+                'termek_id' => 2,
+                'nev' => 'Piros, 40-es méret',
+                'elerheto' => true,
+            ],
+            [
+                'termek_id' => 2,
+                'nev' => 'Kék, 41-es méret',
+                'elerheto' => true,
+            ],
+            
+        ]);
     }
 }
