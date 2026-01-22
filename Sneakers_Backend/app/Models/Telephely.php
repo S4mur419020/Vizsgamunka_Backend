@@ -17,4 +17,15 @@ class Telephely extends Model
         'tipus',
         'cim',
     ];
+
+    public function szekhely()
+    {
+        return $this->belongsTo(Szekhely::class, 'szekhely_id');
+    }
+
+
+    public function termekek()
+    {
+        return $this->hasMany(Termekek::class, 'telephely_id');
+    }
 }

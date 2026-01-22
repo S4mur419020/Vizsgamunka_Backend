@@ -13,7 +13,7 @@ class TermekekController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -29,7 +29,7 @@ class TermekekController extends Controller
      */
     public function store(StoretermekekRequest $request)
     {
-        //
+        
     }
 
     /**
@@ -37,7 +37,7 @@ class TermekekController extends Controller
      */
     public function show(termekek $termekek)
     {
-        //
+       
     }
 
     /**
@@ -45,7 +45,7 @@ class TermekekController extends Controller
      */
     public function edit(termekek $termekek)
     {
-        //
+       
     }
 
     /**
@@ -53,7 +53,6 @@ class TermekekController extends Controller
      */
     public function update(UpdatetermekekRequest $request, termekek $termekek)
     {
-        //
     }
 
     /**
@@ -61,6 +60,6 @@ class TermekekController extends Controller
      */
     public function destroy(termekek $termekek)
     {
-        //
+        
     }
 }

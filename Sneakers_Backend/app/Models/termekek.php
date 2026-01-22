@@ -19,6 +19,8 @@ class Termekek extends Model
         'nem',
         'anyag',
         'elerheto',
+        'ar',
+        'kep',
     ];
 
 
@@ -26,13 +28,13 @@ class Termekek extends Model
         'elerheto' => 'boolean',
     ];
 
-    
+
     public function marka()
     {
         return $this->belongsTo(Markak::class, 'marka_id');
     }
 
-    
+
     public function kategoria()
     {
         return $this->belongsTo(
@@ -42,7 +44,7 @@ class Termekek extends Model
         );
     }
 
-    
+
     public function valtozatok()
     {
         return $this->hasMany(
@@ -50,6 +52,4 @@ class Termekek extends Model
             'termek_id'
         );
     }
-
-
 }

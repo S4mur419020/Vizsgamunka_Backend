@@ -19,4 +19,9 @@ class Szallitasi_cim extends Model
         'utca_szam',
         'megjegyzes'
     ];
+
+    public function felhasznalo()
+    {
+        return $this->belongsTo(User::class, 'felhasznalo_id');
+    }
 }

@@ -17,6 +17,15 @@ class Kosar extends Model
         'meret_id',
         'mennyiseg',
         'hozzaadas_datuma',
-        
+
     ];
+
+    public function felhasznalo()
+    {
+        return $this->belongsTo(Felhasznalo::class, 'felhasznalo_id');
+    }
+    public function termek()
+    {
+        return $this->belongsTo(Termekek::class, 'termek_id');
+    }
 }

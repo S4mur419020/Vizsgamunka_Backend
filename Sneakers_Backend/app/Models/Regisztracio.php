@@ -16,4 +16,7 @@ class Regisztracio extends Model
         'datum',
         'felulet',
     ];
+    public function felhasznalo() {
+    return $this->belongsTo(User::class, 'felhasznalo_id');
+}
 }

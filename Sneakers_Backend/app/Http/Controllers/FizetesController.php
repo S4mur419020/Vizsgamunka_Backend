@@ -27,7 +27,7 @@ class FizetesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreFizetesRequest $request)
+    public function store(/*StoreFizetesRequest $request*/)
     {
         //
     }
@@ -51,7 +51,7 @@ class FizetesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateFizetesRequest $request, Fizetes $fizetes)
+    public function update(/*UpdateFizetesRequest $request,*/ Fizetes $fizetes)
     {
         //
     }

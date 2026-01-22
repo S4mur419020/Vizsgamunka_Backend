@@ -9,7 +9,7 @@ class Szekhely extends Model
 {
     /** @use HasFactory<\Database\Factories\SzekhelyFactory> */
     use HasFactory;
-    
+
     protected $fillable = [
         'id',
         'nev',
@@ -18,4 +18,9 @@ class Szekhely extends Model
         'varos',
         'iranyitoszam'
     ];
+
+    public function telephelyek()
+    {
+        return $this->hasMany(Telephely::class, 'szekhely_id');
+    }
 }

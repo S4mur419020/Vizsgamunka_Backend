@@ -27,7 +27,7 @@ class SzekhelyController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSzekhelyRequest $request)
+    public function store(/*StoreSzekhelyRequest $request*/)
     {
         //
     }
@@ -51,7 +51,7 @@ class SzekhelyController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSzekhelyRequest $request, Szekhely $szekhely)
+    public function update(/*UpdateSzekhelyRequest $request,*/ Szekhely $szekhely)
     {
         //
     }

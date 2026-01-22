@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreRendeles_tetelRequest;
-use App\Http\Requests\UpdateRendeles_tetelRequest;
-use App\Models\Rendeles_tetel;
+use App\Models\Rendeles;
+use Illuminate\Http\Request;
 
-class RendelesTetelController extends Controller
+class RendelesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +26,7 @@ class RendelesTetelController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(/*StoreRendeles_tetelRequest $request*/)
+    public function store(Request $request)
     {
         //
     }
@@ -35,7 +34,7 @@ class RendelesTetelController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Rendeles_tetel $rendeles_tetel)
+    public function show(Rendeles $rendeles)
     {
         //
     }
@@ -43,7 +42,7 @@ class RendelesTetelController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Rendeles_tetel $rendeles_tetel)
+    public function edit(Rendeles $rendeles)
     {
         //
     }
@@ -51,7 +50,7 @@ class RendelesTetelController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(/*UpdateRendeles_tetelRequest $request,*/ Rendeles_tetel $rendeles_tetel)
+    public function update(Request $request, Rendeles $rendeles)
     {
         //
     }
@@ -59,7 +58,7 @@ class RendelesTetelController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Rendeles_tetel $rendeles_tetel)
+    public function destroy(Rendeles $rendeles)
     {
         //
     }
