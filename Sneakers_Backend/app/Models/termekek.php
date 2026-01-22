@@ -21,18 +21,35 @@ class Termekek extends Model
         'elerheto',
     ];
 
+
+    protected $casts = [
+        'elerheto' => 'boolean',
+    ];
+
+    
     public function marka()
     {
         return $this->belongsTo(Markak::class, 'marka_id');
     }
 
+    
     public function kategoria()
     {
-        return $this->belongsTo(Kategoriak::class, 'kategoria_nev', 'megnevezes');
+        return $this->belongsTo(
+            Kategoriak::class,
+            'kategoria_nev',
+            'megnevezes'
+        );
     }
 
+    
     public function valtozatok()
     {
-        return $this->hasMany(Termek_valtozatok::class, 'termek_id');
+        return $this->hasMany(
+            Termek_valtozatok::class,
+            'termek_id'
+        );
     }
+
+
 }

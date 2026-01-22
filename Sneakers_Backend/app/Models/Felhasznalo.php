@@ -4,21 +4,46 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 class Felhasznalo extends Model
 {
     /** @use HasFactory<\Database\Factories\FelhasznaloFactory> */
     use HasFactory;
 
+
+    protected $table = 'felhasznalok';
+
+    protected $primaryKey = 'felhasznalo_id';
+
     protected $fillable = [
-        'felhasznalo_id',
         'nev',
         'email',
         'jelszo',
         'telefonszam',
-        'regisztracio_datuma',
-        'aktiv',
         'nyelv_id',
         'szekhely',
+        'aktiv',
     ];
+
+    protected $hidden = [
+        'jelszo',
+    ];
+
+    protected $casts = [
+        'aktiv' => 'boolean',
+        'created_at' => 'datetime',
+    ];
+
+    
+    public function setJelszoAttribute($value)
+    {
+        $this->attributes['jelszo'] = Hash::make($value);
+    }
+
+    
+    public function nyelv()
+    {
+        return $this->belongsTo(Nyelv::class, 'nyelv_id');
+    }
 }
