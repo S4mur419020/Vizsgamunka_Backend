@@ -18,41 +18,46 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         $this->call([
+            // Általános adatok
+            NyelvSeeder::class,
+            SzekhelySeeder::class,
+            TelephelySeeder::class,
+
+            // Felhasználók 
+            FelhasznaloSeeder::class,
+
+            // Termékek és kapcsolódó táblák
             KategoriakSeeder::class,
             MarkakSeeder::class,
             TermekekSeeder::class,
             TermekValtozatokSeeder::class,
-        ]);
-        
-        $this->call([
-            FelhasznaloSeeder::class,
-            SzekhelySeeder::class,
-            TelephelySeeder::class,
-        ]);
 
-        $this->call([
-            TermekekSeeder::class,
-            TermekValtozatokSeeder::class,
-        ]);
+            // Méretek 
+            MeretSeeder::class,
 
-        $this->call([
+            // Készlet és kosár
             KeszletSeeder::class,
             KosarSeeder::class,
-        ]);
 
-        $this->call([
+            // Ár, akció
             LearazasSeeder::class,
             ArSeeder::class,
-            RendelesTetelSeeder::class,
-            FizetesSeeder::class,
-        ]);
 
-        $this->call([
+            // Fizetés 
+            FizetesSeeder::class,
+
+            // Rendelések és rendelés tételek
+            RendelesSeeder::class,           
+            RendelesTetelSeeder::class,      
+
+            // Blog, módosítások, regisztráció, szállítási címek
             BlogSeeder::class,
             ModositasSeeder::class,
             RegisztracioSeeder::class,
             SzallitasiCimSeeder::class,
         ]);
+
+
 
         User::factory()->create([
             'name' => 'Test User',

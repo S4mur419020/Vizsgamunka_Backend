@@ -8,14 +8,18 @@ use Illuminate\Database\Seeder;
 
 class KosarSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         Kosar::insert([
-            ['felhasznalo_id' => 1, 'created_at' => now(), 'updated_at' => now()],
-            ['felhasznalo_id' => 2, 'created_at' => now(), 'updated_at' => now()],
+            [
+                'felhasznalo_id' => 1,
+                'termek_id' => 1,
+                'meret_id' => 42,
+                'mennyiseg' => 2,
+                'hozzaadas_datum' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }

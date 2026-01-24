@@ -12,7 +12,7 @@ class Felhasznalo extends Model
     use HasFactory;
 
 
-    protected $table = 'felhasznalok';
+    protected $table = 'felhasznalos';
 
     protected $primaryKey = 'felhasznalo_id';
 

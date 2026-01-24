@@ -12,8 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('rendeles', function (Blueprint $table) {
-            $table->id();
+            $table->id('rendeles_id');
+            $table->unsignedBigInteger('felhasznalo_id'); // kötelező
+            $table->unsignedBigInteger('fizetes_id')->nullable();
+            $table->integer('osszeg');
+            $table->string('allapot', 50)->default('feldolgozás alatt');
             $table->timestamps();
+
+            $table->foreign('felhasznalo_id')->references('felhasznalo_id')->on('felhasznalos')->onDelete('cascade');
+            $table->foreign('fizetes_id')->references('fizetesimod_id')->on('fizetes')->onDelete('set null');
         });
     }
 

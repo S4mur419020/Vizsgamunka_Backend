@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('ars', function (Blueprint $table) {
             $table->unsignedBigInteger('akcio')->primary();
             $table->integer('osszeg');
-            $table->boolean('vip');
+            $table->string('penznem', 10)->default('HUF');
+            $table->boolean('vip')->default(false);
+            $table->timestamps(); 
             $table->foreign('akcio')
                 ->references('akcio')
                 ->on('learazas')

@@ -2,16 +2,33 @@
 
 namespace Database\Seeders;
 
+use App\Models\Blog;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class BlogSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        //
+        Blog::insert([
+            [
+                'cim' => 'Első blogbejegyzés',
+                'szerzo_id' => 1,
+                'nyelv_id' => 1,  // hozzáadva
+                'tartalom' => 'Ez egy teszt blog.',
+                'publikacio_datuma' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'cim' => 'Második blogbejegyzés',
+                'szerzo_id' => 1,
+                'nyelv_id' => 1,  // hozzáadva
+                'tartalom' => 'Ez egy második teszt blog.',
+                'publikacio_datuma' => now(),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        ]);
     }
 }

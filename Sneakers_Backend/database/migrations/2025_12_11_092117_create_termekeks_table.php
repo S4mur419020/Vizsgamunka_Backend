@@ -15,28 +15,21 @@ return new class extends Migration
             $table->id('cikkszam');
             $table->string('nev', 50);
 
-            $table->string('marka', 50);
-            $table->string('tipus', 50);
-
             $table->text('leiras')->nullable();
             $table->string('nem', 10);
             $table->string('anyag', 50);
             $table->boolean('elerheto')->default(true);
 
-            $table->foreign(['marka', 'tipus'])
-                ->references(['marka', 'tipus'])
-                ->on('kategoriaks')
-                ->onDelete('cascade');
+            $table->foreignId('marka_id')
+                ->constrained('markaks')
+                ->cascadeOnDelete();
 
-            $table->foreignId('marka_id')->constrained('markaks')->onDelete('cascade');
+            $table->foreignId('kategoria_id')
+                ->constrained('kategoriaks')
+                ->cascadeOnDelete();
 
             $table->timestamps();
         });
-
-
-
-
-
         Schema::enableForeignKeyConstraints();
     }
 

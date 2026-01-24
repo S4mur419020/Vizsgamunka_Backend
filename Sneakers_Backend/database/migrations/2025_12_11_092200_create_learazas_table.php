@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('marka', 50);
             $table->string('tipus', 50);
             $table->integer('akcio_szazalek');
+            $table->boolean('aktiv')->default(1);
             $table->date('kezdo_datum');
             $table->date('zaro_datum');
             $table->foreign(['marka', 'tipus'])
