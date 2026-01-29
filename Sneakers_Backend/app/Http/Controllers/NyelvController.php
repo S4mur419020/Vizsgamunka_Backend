@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreNyelvRequest;
 use App\Http\Requests\UpdateNyelvRequest;
 use App\Models\Nyelv;
+use Illuminate\Http\Request;
 
 class NyelvController extends Controller
 {
@@ -27,7 +28,7 @@ class NyelvController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreNyelvRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class NyelvController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateNyelvRequest $request, Nyelv $nyelv)
+    public function update(Request $request, Nyelv $nyelv)
     {
         //
     }

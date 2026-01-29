@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreLearazasRequest;
 use App\Http\Requests\UpdateLearazasRequest;
 use App\Models\Learazas;
+use Illuminate\Http\Request;
 
 class LearazasController extends Controller
 {
@@ -27,7 +28,7 @@ class LearazasController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreLearazasRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class LearazasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateLearazasRequest $request, Learazas $learazas)
+    public function update(Request $request, Learazas $learazas)
     {
         //
     }

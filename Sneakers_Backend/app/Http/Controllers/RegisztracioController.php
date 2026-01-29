@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreRegisztracioRequest;
 use App\Http\Requests\UpdateRegisztracioRequest;
 use App\Models\Regisztracio;
+use Illuminate\Http\Request;
 
 class RegisztracioController extends Controller
 {
@@ -27,7 +28,7 @@ class RegisztracioController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreRegisztracioRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class RegisztracioController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRegisztracioRequest $request, Regisztracio $regisztracio)
+    public function update(Request $request, Regisztracio $regisztracio)
     {
         //
     }

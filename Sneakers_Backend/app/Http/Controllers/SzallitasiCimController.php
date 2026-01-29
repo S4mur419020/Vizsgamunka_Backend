@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreSzallitasi_cimRequest;
 use App\Http\Requests\UpdateSzallitasi_cimRequest;
 use App\Models\Szallitasi_cim;
+use Illuminate\Http\Request;
 
 class SzallitasiCimController extends Controller
 {
@@ -27,7 +28,7 @@ class SzallitasiCimController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSzallitasi_cimRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class SzallitasiCimController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSzallitasi_cimRequest $request, Szallitasi_cim $szallitasi_cim)
+    public function update(Request $request, Szallitasi_cim $szallitasi_cim)
     {
         //
     }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorearRequest;
 use App\Http\Requests\UpdatearRequest;
 use App\Models\ar;
+use Illuminate\Http\Request;
 
 class ArController extends Controller
 {
@@ -27,7 +28,7 @@ class ArController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorearRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class ArController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatearRequest $request, ar $ar)
+    public function update(Request $request, ar $ar)
     {
         //
     }

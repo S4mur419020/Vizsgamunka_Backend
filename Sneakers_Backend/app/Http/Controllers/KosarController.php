@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreKosarRequest;
 use App\Http\Requests\UpdateKosarRequest;
 use App\Models\Kosar;
+use Illuminate\Http\Request;
 
 class KosarController extends Controller
 {
@@ -27,7 +28,7 @@ class KosarController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreKosarRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class KosarController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateKosarRequest $request, Kosar $kosar)
+    public function update(Request $request, Kosar $kosar)
     {
         //
     }

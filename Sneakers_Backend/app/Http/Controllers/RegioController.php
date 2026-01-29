@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreRegioRequest;
 use App\Http\Requests\UpdateRegioRequest;
 use App\Models\Regio;
+use Illuminate\Http\Request;
 
 class RegioController extends Controller
 {
@@ -27,7 +28,7 @@ class RegioController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreRegioRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class RegioController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRegioRequest $request, Regio $regio)
+    public function update(Request $request, Regio $regio)
     {
         //
     }

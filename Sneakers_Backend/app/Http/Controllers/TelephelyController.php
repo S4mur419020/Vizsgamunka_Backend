@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTelephelyRequest;
 use App\Http\Requests\UpdateTelephelyRequest;
 use App\Models\Telephely;
+use Illuminate\Http\Request;
 
 class TelephelyController extends Controller
 {
@@ -27,7 +28,7 @@ class TelephelyController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreTelephelyRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class TelephelyController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTelephelyRequest $request, Telephely $telephely)
+    public function update(Request $request, Telephely $telephely)
     {
         //
     }

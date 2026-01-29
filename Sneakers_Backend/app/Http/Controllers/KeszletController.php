@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreKeszletRequest;
 use App\Http\Requests\UpdateKeszletRequest;
 use App\Models\Keszlet;
+use Illuminate\Http\Request;
 
 class KeszletController extends Controller
 {
@@ -27,7 +28,7 @@ class KeszletController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreKeszletRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class KeszletController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateKeszletRequest $request, Keszlet $keszlet)
+    public function update(Request $request, Keszlet $keszlet)
     {
         //
     }

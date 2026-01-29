@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreMeretRequest;
 use App\Http\Requests\UpdateMeretRequest;
 use App\Models\Meret;
+use Illuminate\Http\Request;
 
 class MeretController extends Controller
 {
@@ -27,7 +28,7 @@ class MeretController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreMeretRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class MeretController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateMeretRequest $request, Meret $meret)
+    public function update(Request $request, Meret $meret)
     {
         //
     }
